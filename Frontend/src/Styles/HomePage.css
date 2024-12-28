@@ -1,0 +1,44 @@
+.homepage-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .homepage-title {
+    font-size: 2.5rem;
+    color: #F2F9FF;
+    margin-bottom: 20px;
+  }
+  
+  .homepage-text {
+    font-size: 1.2rem;
+    color: #E195AB;
+    margin-bottom: 30px;
+  }
+  
+  .homepage-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .homepage-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homepage-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .homepage-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
