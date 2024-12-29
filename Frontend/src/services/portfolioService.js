@@ -1,32 +1,6 @@
-// import axios from "axios";
-
-// const API_BASE_URL = "http://localhost:3000";
-
-// export const createPortfolio = async (data) => {
-//   const token = localStorage.getItem("token"); 
-//   try {
-//     const response = await axios.post(
-//       `${API_BASE_URL}/portfolio/create`,
-//       data,
-//       {
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: `Bearer ${token}`, // Include token if required
-//         },
-//       }
-//     );
-
-//     return response.data; // Return created portfolio data
-//   } catch (error) {
-//     console.error("Error creating portfolio:", error.response?.data || error.message);
-//     throw new Error(error.response?.data?.message || "Portfolio creation failed.");
-//   }
-// };
-
-
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const createPortfolio = async (data) => {
   const token = localStorage.getItem("token"); // Ensure token is retrieved correctly
