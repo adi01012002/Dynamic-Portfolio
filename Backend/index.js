@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 const corsOptions = {
-  origin: process.env.CLIENT_URL,
+  origin: process.env.CLIENT_URL|| "https://67715d154e3074f9cbe331fb--inspiring-paprenjak-6dc97c.netlify.app" ,// Deployed frontend,
   optionsSuccessStatus: 200,
   credentials: true,
   methods: "GET,POST",
