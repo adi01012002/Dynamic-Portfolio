@@ -13,7 +13,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 const corsOptions = {
   origin: [process.env.CLIENT_URL,
-     "https://iridescent-fairy-255e7a.netlify.app",
+     "https://dynamic-portfolio-1-qxd7.onrender.com/",
   ],
   optionsSuccessStatus: 200,
   credentials: true,
