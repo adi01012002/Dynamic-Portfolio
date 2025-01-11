@@ -22,6 +22,19 @@ app.use(cors());
 //   allowedHeaders: "Content-Type,Authorization",
 // };
 // app.use(cors(corsOptions));
+
+
+if (process.env.NODE_ENV === 'production') {
+  // Serve static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+  // Handle all other routes by sending index.html
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
+
+
 app.use("/auth", authRoutes);
 app.use("/portfolio", portfolioRoutes);
 const PORT = process.env.PORT;
