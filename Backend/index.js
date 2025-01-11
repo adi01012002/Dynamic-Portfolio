@@ -6,6 +6,7 @@ const authRoutes = require("./routes/authRoutes");
 const portfolioRoutes = require("./routes/portfolioRoutes");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const path = require('path');
 dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
