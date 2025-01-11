@@ -1,5 +1,4 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from "./context/AuthContext";
 import HomePage from "./components/HomePage";
 import LoginPage from "./components/LoginForm";
@@ -17,8 +16,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/auth/dashboard/:id" element={<Dashboard />} />
-          <Route path="/auth/portfolio-form" element={ <PortfolioForm/>} />
-          <Route path="/auth/portfolio/:id" element={<PortfolioPage/>} />
+          <Route path="/auth/portfolio-form" element={<PortfolioForm />} />
+          <Route path="/auth/portfolio/:id" element={<PortfolioPage />} />
         </Routes>
       </Router>
     </AuthProvider>
