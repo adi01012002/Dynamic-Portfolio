@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 const corsOptions = {
-  origin: [process.env.CLIENT_URL,
+  origin: [
      "https://dynamic-portfolio-1-qxd7.onrender.com/",
   ],
   optionsSuccessStatus: 200,
