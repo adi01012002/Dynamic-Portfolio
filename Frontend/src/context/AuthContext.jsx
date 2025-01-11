@@ -1,39 +1,3 @@
-// import { createContext, useState, useEffect } from "react";
-
-// const AuthContext = createContext();
-
-// export const AuthProvider = ({ children }) => {
-//   const [user, setUser] = useState(null);
-//   const [token, setToken] = useState(localStorage.getItem("authToken") || null);
-
-//   useEffect(() => {
-//     if (token) {
-//       // Decode token or fetch user details if needed
-//       setUser({ username: "User" }); // Example user setup, fetch real details if required
-//     }
-//   }, [token]);
-
-//   const login = (userData) => {
-//     setUser(userData);
-//     setToken(userData.token);
-//     localStorage.setItem("authToken", userData.token);
-//   };
-
-//   const logout = () => {
-//     setUser(null);
-//     setToken(null);
-//     localStorage.removeItem("authToken");
-//   };
-
-//   return (
-//     <AuthContext.Provider value={{ user, token, login, logout }}>
-//       {children}
-//     </AuthContext.Provider>
-//   );
-// };
-
-// export default AuthContext;
-
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
@@ -43,7 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem("authToken") || null);
   const [loading, setLoading] = useState(true);
-  const API_BASE_URL = "http://localhost:3000";
+  const API_BASE_URL = "https://dynamic-portfolio-9s2d.onrender.com";
   useEffect(() => {
     const fetchUser = async () => {
       if (token) {
