@@ -12,16 +12,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-// const corsOptions = {
-//   origin: [
-//      "https://dynamic-portfolio-1-qxd7.onrender.com/",
-//   ],
-//   optionsSuccessStatus: 200,
-//   credentials: true,
-//   methods: "GET,POST",
-//   allowedHeaders: "Content-Type,Authorization",
-// };
-// app.use(cors(corsOptions));
+const corsOptions = {
+  origin: [
+     "https://dynamic-portfolio-mxjx.onrender.com",
+  ],
+  optionsSuccessStatus: 200,
+  credentials: true,
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type,Authorization",
+};
+app.use(cors(corsOptions));
 app.use("/auth", authRoutes);
 app.use("/portfolio", portfolioRoutes);
 const PORT = process.env.PORT;
